@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The Button</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="icon" href="site-data/favicon.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" sizes="180x180" href="site-data/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="site-data/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="site-data/favicon-16x16.png" />
+    <link rel="manifest" href="site-data/site.webmanifest" />
+    <style>
+      /* Custom CSS for particle animations */
+      @keyframes float {
+        0% {
+          transform: translateY(0) scale(1);
+          opacity: 1;
+        }
+        100% {
+          transform: translateY(-100px) scale(0);
+          opacity: 0;
+        }
+      }
+    </style>
+  </head>
+  <body class="bg-black h-screen flex flex-col justify-center items-center overflow-hidden">
+    <div class="text-center">
+      <h1 class="text-5xl font-bold text-white mb-8">The Button</h1>
+      <div class="relative">
+        <!-- The Button -->
+        <button
+          id="theButton"
+          class="w-48 h-48 rounded-full bg-gradient-to-br from-gray-900 to-black border-4 border-gray-800 shadow-[0_25px_50px_-12px_rgba(255,255,255,0.25)] hover:shadow-[0_35px_60px_-12px_rgba(255,255,255,0.4)] transition-all duration-300 ease-in-out transform hover:scale-105 active:scale-95 active:shadow-[0_15px_30px_-12px_rgba(255,255,255,0.2)]"
+        ></button>
+      </div>
+      <!-- Click Counter -->
+      <div class="mt-8 text-white text-2xl">
+        Clicks: <span id="counter">0</span>
+      </div>
+    </div>
+    <!-- Particles Container -->
+    <div id="particles" class="absolute top-0 left-0 w-full h-full pointer-events-none"></div>
+    <script src="script.js"></script>
+  </body>
+</html>
